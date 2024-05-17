@@ -1,0 +1,6 @@
+pandas
+streamlit
+scipy
+numpy
+pymongo == 4.7.2
+plotly
