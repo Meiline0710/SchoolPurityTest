@@ -4,34 +4,34 @@ import streamlit as st
 survey_categories = {
     "Performances_intellectuelles": [
         {
-            "question": "As-tu déjà effectué des calculs frauduleux pour savoir si tu devais réviser pour un examen ?",
+            "question": "As-tu déjà effectué des calculs sur ta moyenne pour savoir si tu devais réviser pour un examen ?",
             "answers": ["Oui", "Non"],
             "scores": [-1, 1]
         },
        
         {
             "question": "As-tu déjà été à un DS sans réviser en te disant que réviser était douter de ses capacités ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, et j'ai eu 4", "Non"],
             "scores": [-1, 1]
         },
         {
             "question": "Participes-tu beaucoup à l’oral en cours ?",
-            "answers": ["Oui", "Non"],
-            "scores": [1, -1]
+            "answers": ["Oui", "Non", "De temps en temps"],
+            "scores": [1, -1, 0.5]
         },
         {
             "question": "Poses-tu des questions aux professeurs quand tu en ressens le besoin ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, je suis le meilleur"],
             "scores": [1, -1]
         },
         {
             "question": "As-tu des facilitées en cours ?",
-            "answers": ["Oui", "Non"],
-            "scores": [1, -1]
+            "answers": ["Oui", "Non", "Ça dépend des matières"],
+            "scores": [1, -1, 0.5]
         },
         {
             "question": "Es-tu une personne bien organisée ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, je suis carrément bordélique"],
             "scores": [1, -1]
         },
         {
@@ -54,12 +54,12 @@ survey_categories = {
         },
         {
             "question": "Arrives-tu en retard en cours ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, en même temps il y a des bouchons", "Non"],
             "scores": [-1, 1]
         },
         {
-            "question": "As-tu déjà assisté à un cours de langue ?",
-            "answers": ["Oui", "Non"],
+            "question": "As-tu déjà assisté à un cours de LV2 ?",
+            "answers": ["Si señor", "Non"],
             "scores": [1, -1]
         },
         {
@@ -74,7 +74,7 @@ survey_categories = {
         },
         {
             "question": "Pour toi les vacances scolaires sont :",
-            "answers": ["Des journées sans cours ", "Le moment pour réviser et se remettre à jour ", "« Pendant les vacances je ne fais RIEN, je suis tranquille je ne fais RIEN » "],
+            "answers": ["Des jours sans cours ", "Le moment pour réviser et se remettre à jour ", "« Pendant les vacances je ne fais RIEN, je suis tranquille je ne fais RIEN » "],
             "scores": [1, 0.5, -1]
         },
         {
@@ -92,27 +92,27 @@ survey_categories = {
     "Sécurité": [
         {
             "question": "As-tu déjà respecté le stop avant le parking de l’école ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, je l'ai jamais vu"],
             "scores": [1, -1]
         },
         {
-            "question": "As-tu déjà eu l’envie de shooter dans un bouffe de l’agora ?",
-            "answers": ["Oui", "Non"],
+            "question": "As-tu déjà eu l’envie de shooter dans un pouf de l’agora ?",
+            "answers": ["Oui, pleine lucarne", "Non"],
             "scores": [-1, 1]
         },
         {
-            "question": "T’ais-tu déjà garer sur des places visiteurs du parking ?",
-            "answers": ["Oui", "Non"],
+            "question": "Es-ce-que tu t'es déjà garer sur des places visiteurs du parking ?",
+            "answers": ["Oui, toute façon il a pas de visiteurs", "Non"],
             "scores": [-1, 1]
         },
         {
-            "question": "As-tu déjà eu l’envie de lancer quelque chose sur l’ISS ?",
+            "question": "As-tu déjà eu l’envie de lancer quelque chose sur l’ISS ou Ariane 5 ?",
             "answers": ["Oui", "Non"],
             "scores": [-1, 1]
         },
         {
             "question": "As-tu déjà pris le parking de l’école pour un circuit de F1 ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, je suis Max Verstappen", "Non"],
             "scores": [-1, 1]
         },
         {
@@ -122,7 +122,7 @@ survey_categories = {
         },
         {
             "question": "As-tu déjà manger dans une salle de cours alors que c’est strictement interdit ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, j'ai même demandé à Dinety s'il en voulait un bout", "Non"],
             "scores": [-1, 1]
         },
         {
@@ -135,7 +135,7 @@ survey_categories = {
     "Sérieux": [
         {
             "question": "Que penses-tu des stages à l’étranger :",
-            "answers": ["Les entreprises partenaires ne connaissent toujours pas nôtre école ", "Très grande opportunité du point de vue culturel et découverte du monde du travail ", "Linkedin devient ton meilleur ami ", "Tu mets plus de temps à chercher un stage que la durée dans laquelle tu vas y être "],
+            "answers": ["Les entreprises partenaires ne connaissent toujours pas notre école ", "Très grande opportunitée du point de vue culturel et découverte du monde du travail ", "LinkedIn devient ton meilleur ami ", "Tu mets plus de temps à chercher un stage que la durée du stage "],
             "scores": [-1, 1, 0.5, -1]
         }, 
         {
@@ -144,36 +144,36 @@ survey_categories = {
             "scores": [1, 0.5, -1]
         },
         {
-            "question": "As-tu déjà demandé à Madame Ramall de faire ton code ?",
-            "answers": ["Oui", "Non"],
+            "question": "As-tu déjà demandé à Madame Rammal de faire ton code ?",
+            "answers": ["Oui, elle est trop forte", "Non"],
             "scores": [-1, 1]
         },
         {
             "question": "CHATGPT représente-t-il 50 % de ton diplôme ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, j'ai même pris l'abonnement premium", "Non"],
             "scores": [-1, 1]
         },
         {
             "question": "Vas-tu obtenir ton TOEIC ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Yes of course", "Non"],
             "scores": [1, -1]
         },
         {
             "question": "As-tu déjà écouté ne serait-ce qu’un seul cours de PPL ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, c'est le vendredi à 8h aussi"],
             "scores": [1, -1]
         },
       
        
         {
-            "question": "T’ais-tu déjà fais virer de cours ?",
-            "answers": ["Oui", "Non"],
+            "question": "Es-ce-que tu t'es déjà fais virer de cours ?",
+            "answers": ["Oui, mais c'était pas ma faute", "Non"],
             "scores": [-1, 1]
         },
         
         {
             "question": "Es-tu déjà venu en cours bourré ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, je déconseille fortement", "Non"],
             "scores": [-1, 1]
         },    
     ],
@@ -185,8 +185,8 @@ survey_categories = {
         },
         {
             "question": "Fais-tu des activités extra-scolaires avec tes ami(e)s de l’école ?",
-            "answers": ["Oui", "Non"],
-            "scores": [1, -1]
+            "answers": ["Oui", "Non", "La Pena ça compte ?"],
+            "scores": [1, -1, 0.5]
         },
         {
             "question": "Est-ce que tu te porterais volontaire si tu devais, à ton échelle, aider l’école ?",
@@ -195,7 +195,7 @@ survey_categories = {
         },
         {
             "question": "Pourrais-tu participer à une journée porte ouverte pour promouvoir ton école ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui, il y a des sandwich gratuit", "Non"],
             "scores": [1, -1]
         },
         {
@@ -210,19 +210,19 @@ survey_categories = {
         },
         {
             "question": "Pourrais-tu travailler au sein de l’école après ton diplôme ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, 5 ans c'est déjà beaucoup"],
             "scores": [1, -1]
         }
     ],
     "Entre-aide": [
         {
-            "question": "Aides-tu tes camarades de classe à réviser un examen quand ils en nécessitent le besoin ?",
+            "question": "Aides-tu tes camarades de classe à réviser un examen quand ils en ont le besoin ?",
             "answers": ["Oui", "Non"],
             "scores": [1, -1]
         },
         {
             "question": "As-tu déjà prêté tes cours ou tes corrections de TD à quelqu’un ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, j'ai garder mes habitudes de CPGE"],
             "scores": [1, -1]
         },
         {
@@ -232,7 +232,7 @@ survey_categories = {
         },
         {
             "question": "As-tu déjà effectué du soutien scolaire pour les promotions en-dessous de la tienne ?",
-            "answers": ["Oui", "Non"],
+            "answers": ["Oui", "Non, je suis trop nul pour ça"],
             "scores": [1, -1]
         },
         {
