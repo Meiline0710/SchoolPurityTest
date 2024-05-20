@@ -5,7 +5,7 @@ from pymongo.server_api import ServerApi
 
 st.set_page_config(
     page_title="School Purity Test",
-    page_icon="👋",
+    page_icon="✈️",
     initial_sidebar_state="collapsed"
 )
 from functions import *
