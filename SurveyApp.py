@@ -4,7 +4,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 st.set_page_config(
-    page_title="Hello",
+    page_title="School Purity Test",
     page_icon="👋",
     initial_sidebar_state="collapsed"
 )
