@@ -89,14 +89,14 @@ def pageHome():
 
     st.header("Quel type d'étudiant es-tu ? ")
 
-    st.write('Test toi afin de savoir si tu es considéré(e) comme un bon élève à ELISA Aerospace ')
+    st.write('Teste toi afin de savoir si tu es considéré(e) comme un bon élève à ELISA Aerospace ')
 
     firstname = st.text_input("Prénom")
     lastname = st.text_input("Nom")
 
     option_promo = st.selectbox(
     "Quelle est ta promotion ?",
-    ("Bachelor 1", "Bachelor 2", "Bachelor 3","Elisa 1 ","Elisa 2","Elisa 3","ELisa 4","Elisa 5","Alumni"))
+    ("Elisa 1 ","Elisa 2","Elisa 3","ELisa 4","Elisa 5","Bachelor 1", "Bachelor 2", "Bachelor 3","Alumni"))
 
 
     if firstname:
